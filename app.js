@@ -10,6 +10,11 @@ function generateParts(partsAmount,footerAmount) {
     part.className = "tree-footer"
     document.body.append(part)
   }
+
+  let part = document.createElement('h2');
+  part.className = "wish"
+  part.textContent = "Желаю в новом году: " + getWish();
+  document.body.append(part);
 }
 
 function setPart(index) {
@@ -40,3 +45,18 @@ function generate() {
     setPart(index);
   }
 }
+
+function getWish() {
+  let wish = wishDatabase[Math.floor(Math.random() * wishDatabase.length)]
+
+  return wish;
+}
+
+wishDatabase = [
+  "Хорошего кода",
+  "Отсутвия багов",
+  "Хорошего коллектива",
+  "Отсутствия ошибок компиляции",
+  "Отсутсвия ошибок разметки html",
+  "Множество коммитов на гитхабе",
+]

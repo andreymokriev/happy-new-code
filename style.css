@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: rgb(10, 213, 10)
+  color: rgb(10, 213, 10);
 }
 
 h1 {
@@ -9,16 +9,41 @@ h1 {
   font-size: 50px;
 }
 
-.tree-part, .tree-footer {
+.tree-part, .tree-footer, .wish {
   text-align: center;
   margin: 0;
   letter-spacing: 5px;
-  font-size: 40px;
+  font-size: auto;
   font-weight: bold;
+  overflow-x: hidden;
 }
 
 .button {
   border: solid white 1px;
   padding: 2px;
   cursor: pointer;
+}
+
+input {
+  width: 100px;
+}
+
+.logo h1{
+  overflow: hidden;
+  border-right: .15em solid;
+  margin: 0 auto; 
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(10, 213, 10); }
 }
